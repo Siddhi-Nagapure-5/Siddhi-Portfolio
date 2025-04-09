@@ -1,0 +1,86 @@
+.coder-profile {
+    background-color: #00010c;
+    /* Dark blue background */
+    color: #ffffff;
+    font-family: "Courier New", Courier, monospace;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-top:100px;
+    animation: glow 3s infinite alternate ease-in-out;
+}
+
+.coder-profile::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #21a3ad, #000418, #cc02b890, #080116, #7c86cd);
+    background-size: 300%;
+    border-radius: 15px;
+    z-index: -1;
+    animation: slideBorder 6s infinite linear;
+    filter: blur(4px);
+   
+    /* Adds a subtle glow to the border */
+}
+#handle{
+    font-size: 30px;
+    font-family:Verdana, sans-serif;
+
+}
+.coder-profile::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    /* Adjust inner border spacing */
+    left: 2px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: #080009;
+    border-radius: 13px;
+    z-index: -1;
+}
+.coder-profile:hover{
+animation: glow 3s infinite alternate ease-in-out;
+}
+.coder-section {
+    margin: 10px 0;
+}
+
+.label {
+    font-weight: bold;
+    color: #ff65a3;
+    /* Pinkish label color */
+}
+
+@keyframes slideBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(10, 3, 61, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 30px rgba(5, 0, 25, 0.8);
+    }
+}
